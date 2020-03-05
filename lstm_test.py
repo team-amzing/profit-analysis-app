@@ -55,7 +55,7 @@ oil_exports     = qdl.get("JODI/OIL_CREXBK_WORLD"  , returns="pandas").drop("Not
 oil_reserves    = qdl.get("BP/OIL_RESERVES_WRLD"   , returns="pandas")
 oil_consumption = qdl.get("BP/OIL_CONSUM_WRLD"     , returns="pandas")
 
-dfs = [oil_price, oil_demand, oil_imports, oil_exports, oil_reserves, oil_consumption]
+dfs = [oil_price, oil_production, oil_imports, oil_exports, oil_reserves, oil_consumption]
 
 min_dates = []
 for df in dfs:
@@ -147,6 +147,6 @@ for days_ahead in range(5):
 	print(model.predict(example)*maximum[0])
 
 reframed.drop(reframed.columns[[6]], axis=1, inplace=True)
-reframed.columns = ["Price", "World Demand", "World Imports", "World Exports", "World Reserves", "World Consumption", "Prediction"]
+reframed.columns = ["Price", "World Production", "World Imports", "World Exports", "World Reserves", "World Consumption", "Prediction"]
 reframed.plot()
 plt.savefig("predict.png")
