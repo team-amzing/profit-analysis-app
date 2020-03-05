@@ -49,7 +49,7 @@ qdl.ApiConfig.api_key = API_KEY
 
 # Get data from the quandl api, then only return the number of days asked for
 oil_price       = qdl.get("EIA/PET_RWTC_D"         , returns="pandas")
-oil_demand      = qdl.get("JODI/OIL_CRPRKD_WORLD"  , returns="pandas").drop("Notes", axis = 1)
+oil_production  = qdl.get("JODI/OIL_CRPRKD_WORLD"  , returns="pandas").drop("Notes", axis = 1)
 oil_imports     = qdl.get("JODI/OIL_CRIMKT_WORLD"  , returns="pandas").drop("Notes", axis = 1)
 oil_exports     = qdl.get("JODI/OIL_CREXBK_WORLD"  , returns="pandas").drop("Notes", axis = 1)
 oil_reserves    = qdl.get("BP/OIL_RESERVES_WRLD"   , returns="pandas")
