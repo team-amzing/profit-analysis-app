@@ -1,0 +1,16 @@
+pytest==5.2.0
+black==19.3b0
+flake8==3.7.8
+ipdb==0.12.2
+coverage==4.5.4
+pre-commit==1.18.3
+numpy==1.17.4
+matplotlib==3.1.2
+quandl==3.4.8
+statsmodels==0.10.1
+tkinter==2.7.11
+bs4==0.0.1
+requests==2.23.0
+scikit-learn==0.22.2
+sklearn==0.0
+re==*
